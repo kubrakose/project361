@@ -1,0 +1,51 @@
+body{
+    font-family:'Century Gothic';
+    font-size: 20px;
+    margin:auto;
+    background: rgba(182, 182, 182, 0.45);
+    position: relative;
+}
+
+p{
+    text-align: center;
+    padding-top: 50px;
+    font-style: normal ;
+    font-size: 30px;
+}
+.menu{
+    text-align: center;
+    position: relative;
+    top:300px
+}
+.menu li{
+    display: inline;
+    padding-right: 10px;
+}
+.menu ul a{
+    text-decoration: none;
+    color: #4a464c;
+}
+.menu a:hover{
+    text-decoration: underline;
+    font-size:30px;
+    color: black;
+}
+
+.sec{
+    text-align: center;
+    position: relative;
+    top: 150px;
+}
+.sec li{
+    list-style: none;
+    text-decoration: none;
+}
+
+button{
+   font-size: 50px;
+}
+
+a:after{
+    padding: 0 30px;
+    color: #4a464c;
+}

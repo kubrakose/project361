@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>What is New?</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="/static/css/style.css">
+	<meta name="viewport content = width-device-width, initial-scale=1.0">
+</head>
+<body class="body">
+	<header class="mainHead">
+		<img src="/static/img/rsm.jpg" width="800" height="300" style="margin-left: 70px">
+		<nav><ul>
+			<li><a href='/'>Home</a></li>
+			{# <li><a href='/blog/'>Blog</a></li> #}
+			{#  <li><a href='#'>News</a></li> #}
+			{# <li><a href='#/'>Archive</a></li> #}
+		
+		</ul></nav>
+	</header>
+	
+	<aside class="sideInfo">
+		<article>
+			<h3>Recent News</h3>
+			{% for post in object_list %}
+			<p>{{ post.date|date:"Y-m-d" }}<a> {{ post.title }}</a></p>
+			{% endfor %}
+		</article>
+	</aside>
+
+{% block content %}
+
+{% endblock %}
+	
+	<footer class="mainFooter">
+		<p> copyright &copy; 2014</p>
+	</footer>
+
+</body>
+</html>

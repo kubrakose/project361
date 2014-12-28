@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/css/h1.css">
+    <title>Products and Prices</title>
+</head>
+<body>
+ {% block content %}
+<p>Products and Prices</p>
+<div class="sec">
+<form action=""  method="POST">
+    <ul>
+        <li>
+            <label for="tur">Choose item</label>
+                <select name="tur" style="font-size:15px">
+                    <option value="All">All Items</option>
+                    {% for type in products %}
+                        <option value="{{ type }}">{{ type }}</option>
+                    {% endfor %}
+                </select>
+        </li>
+        <li>
+            <label for="brand">Enter brand</label>
+            <input name="brand" value="{{ brand }}" >
+           {#   <select name="brand" style="font-size:15px">#}
+                  {#    <option value="All" selected="selected">All Brands</option> #}
+                    {#% for brand in brands %#}
+                        {#  <option value={{ brand }}>{{ brand }}</option>#}
+                    {#% endfor %#}
+                {#  </select>#}
+        </li>
+        <li>
+            <label for="price">Enter price range</label>
+            <input name="price" placeholder="For example: 0-50000">
+        </li>
+        <li>
+            <input type="submit" id="goster" class="goster" value="Show Products" style="font-size:20px; color:  #2f0b18">
+        </li>
+    </ul>
+</form>
+</div>
+<div class="menu">
+    <ul>
+        <li><a href="/blog">What is new?</a></li>
+    </ul>
+</div>
+</body>
+{% endblock %}
+</html>

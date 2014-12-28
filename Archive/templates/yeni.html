@@ -1,0 +1,26 @@
+{% extends "base.html" %}<html>
+{% block content%}
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/css/h1.css">
+    <title></title>
+</head>
+<p style="margin: auto ; color:#6aafe3 ">Results</p>
+<body style="margin: auto; font-size: 14px">
+<p style="font-size: 14px ; color: #6aafe3 ; margin-left: -680px">{{ rakam }} Results Found.</p>
+<table border="1" class="vatan" style="margin: auto">
+    <tr style="color: #5b1432">
+        <th>urunturu</th>
+        <th>urunmarkası</th>
+        <th>model</th>
+        <th>fiyat</th>
+    </tr>
+    <tr>
+        {% for sonuc in sonuclar %}
+            <tr><td>{% for i in sonuc|slice:"0:1" %} {{ i }} {% endfor %}</td><td>{% for i in sonuc|slice:"1:2" %} {{ i }} {% endfor %}</td><td><a style="text-decoration: none ;  color: #4a464c;" href={% for i in sonuc|slice:"3:4" %} {{ i }} {% endfor %}>{% for i in sonuc|slice:"2:3" %} {{ i }} {% endfor %}</a></td><td>{% for i in sonuc|slice:"4:5" %} {{ i }} {% endfor %}</td></tr>
+        {% endfor %}
+    </tr>
+</table>
+</body>
+</html>
+{% endblock %}

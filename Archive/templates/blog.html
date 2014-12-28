@@ -1,0 +1,21 @@
+{% extends "base2.html" %}
+{% block content %}
+
+{% for post in object_list %}
+<div class="mainContent">
+	<div class = "content">
+		<article class="blogarticle">
+			<header>
+				<h3><a>{{ post.title }}</a></h3>
+			</header>
+			<footer>
+				<p class = 'postInfo'>Posted {{ post.createddate }}</p>
+			</footer>
+			<content>
+				<p>	{{ post.body|safe|linebreaks}} </p>
+            </content>
+		</article>
+	</div>
+</div>
+{% endfor %}
+{% endblock %}
